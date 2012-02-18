@@ -1,16 +1,14 @@
-%define extraver rc1
 %define module boto
 
 Name:           python-%{module}
-Version:	2.0
-Release:        %mkrel 1
+Version:	2.2.2
+Release:        1
 License:        MIT
 Summary:        Python interface to Amazon Web Services
 Url:            http://code.google.com/p/boto/
 Group:          Development/Python
-Source:         %{module}-%{version}%{extraver}.tar.gz
+Source0:	http://boto.googlecode.com/files/%{module}-%{version}.tar.gz
 BuildRequires:  python-setuptools
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Buildarch:	noarch
 
 %description
@@ -34,20 +32,15 @@ services offered by Amazon Web Services. Currently, this includes:
     * Route53 DNS Service (route53) 
 
 %prep
-%setup -q -n %{module}-%{version}%{extraver}
+%setup -q -n %{module}-%{version}
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" %{__python} setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitearch}
 
-%clean
-rm -rf %{buildroot}
-
 %files 
-%defattr(-,root,root)
 %{python_sitearch}/*
 %{_bindir}/*
 
