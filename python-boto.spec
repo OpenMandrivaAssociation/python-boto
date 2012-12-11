@@ -45,3 +45,14 @@ CFLAGS="$RPM_OPT_FLAGS" %{__python} setup.py build
 %{_bindir}/*
 
 
+
+
+%changelog
+* Sat Feb 18 2012 Alexander Khrukin <akhrukin@mandriva.org> 2.2.2-1
++ Revision: 777032
+- version update 2.2.2
+
+* Wed Jun 08 2011 Antoine Ginies <aginies@mandriva.com> 2.0-1
++ Revision: 683242
+- import python-boto
+
