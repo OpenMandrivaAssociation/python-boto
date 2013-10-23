@@ -1,13 +1,13 @@
 %define module boto
 
 Name:           python-%{module}
-Version:	2.2.2
+Version:	2.13.3
 Release:        1
 License:        MIT
 Summary:        Python interface to Amazon Web Services
 Url:            http://code.google.com/p/boto/
 Group:          Development/Python
-Source0:	http://boto.googlecode.com/files/%{module}-%{version}.tar.gz
+Source0:	http://pypi.python.org/packages/source/b/boto/boto-%{version}.tar.gz
 BuildRequires:  python-setuptools
 Buildarch:	noarch
 
@@ -35,13 +35,13 @@ services offered by Amazon Web Services. Currently, this includes:
 %setup -q -n %{module}-%{version}
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" %{__python} setup.py build
+CFLAGS="%{optflags}" %{__python} setup.py build
 
 %install
-%{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitearch}
+%{__python} setup.py install --root %{buildroot} --install-purelib=%{py_platsitedir}
 
 %files 
-%{python_sitearch}/*
+%{py_platsitedir}/*
 %{_bindir}/*
 
 
@@ -55,4 +55,5 @@ CFLAGS="$RPM_OPT_FLAGS" %{__python} setup.py build
 * Wed Jun 08 2011 Antoine Ginies <aginies@mandriva.com> 2.0-1
 + Revision: 683242
 - import python-boto
+
 

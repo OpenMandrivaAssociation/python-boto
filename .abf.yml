@@ -1,2 +1,4 @@
+removed_sources:
+  boto-2.2.2.tar.gz: b4ac32ae01fd504d7867b205fb3784bb8c5c65eb
 sources:
-  "boto-2.2.2.tar.gz": b4ac32ae01fd504d7867b205fb3784bb8c5c65eb
+  boto-2.13.3.tar.gz: 0266bddb3a74ffb95cbebc808af2411121cca3de
