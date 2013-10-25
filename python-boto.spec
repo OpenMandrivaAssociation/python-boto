@@ -1,5 +1,7 @@
 %define module boto
 
+%define debug_package %{nil}
+
 Name:           python-%{module}
 Version:	2.13.3
 Release:        1
@@ -9,7 +11,6 @@ Url:            http://code.google.com/p/boto/
 Group:          Development/Python
 Source0:	http://pypi.python.org/packages/source/b/boto/boto-%{version}.tar.gz
 BuildRequires:  python-setuptools
-Buildarch:	noarch
 
 %description
 An integrated interface to current and future infrastructural
@@ -43,17 +44,5 @@ CFLAGS="%{optflags}" %{__python} setup.py build
 %files 
 %{py_platsitedir}/*
 %{_bindir}/*
-
-
-
-
-%changelog
-* Sat Feb 18 2012 Alexander Khrukin <akhrukin@mandriva.org> 2.2.2-1
-+ Revision: 777032
-- version update 2.2.2
-
-* Wed Jun 08 2011 Antoine Ginies <aginies@mandriva.com> 2.0-1
-+ Revision: 683242
-- import python-boto
 
 
