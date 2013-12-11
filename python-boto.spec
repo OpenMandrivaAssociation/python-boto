@@ -3,7 +3,7 @@
 %define debug_package %{nil}
 
 Name:           python-%{module}
-Version:	2.13.3
+Version:	2.19.0
 Release:        1
 License:        MIT
 Summary:        Python interface to Amazon Web Services
@@ -44,5 +44,6 @@ CFLAGS="%{optflags}" %{__python} setup.py build
 %files 
 %{py_platsitedir}/*
 %{_bindir}/*
+
 
 
