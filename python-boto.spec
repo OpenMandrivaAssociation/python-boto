@@ -3,7 +3,7 @@
 %define debug_package %{nil}
 
 Name:           python-%{module}
-Version:	2.19.0
+Version:	2.26.1
 Release:        1
 License:        MIT
 Summary:        Python interface to Amazon Web Services
@@ -36,14 +36,15 @@ services offered by Amazon Web Services. Currently, this includes:
 %setup -q -n %{module}-%{version}
 
 %build
-CFLAGS="%{optflags}" %{__python} setup.py build
+CFLAGS="%{optflags}" python setup.py build
 
 %install
-%{__python} setup.py install --root %{buildroot} --install-purelib=%{py_platsitedir}
+python setup.py install --root %{buildroot} --install-purelib=%{py_platsitedir}
 
 %files 
 %{py_platsitedir}/*
 %{_bindir}/*
+
 
 
 
