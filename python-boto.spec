@@ -3,10 +3,11 @@
 %define debug_package %{nil}
 
 Name:           python-%{module}
-Version:	2.26.1
+Version:	2.27.0
 Release:        1
 License:        MIT
 Summary:        Python interface to Amazon Web Services
+
 Url:            http://code.google.com/p/boto/
 Group:          Development/Python
 Source0:	http://pypi.python.org/packages/source/b/boto/boto-%{version}.tar.gz
@@ -44,6 +45,7 @@ python setup.py install --root %{buildroot} --install-purelib=%{py_platsitedir}
 %files 
 %{py_platsitedir}/*
 %{_bindir}/*
+
 
 
 
