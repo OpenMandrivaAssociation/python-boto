@@ -3,7 +3,7 @@
 %define debug_package %{nil}
 
 Name:           python-%{module}
-Version:	2.27.0
+Version:	2.32.1
 Release:        1
 License:        MIT
 Summary:        Python interface to Amazon Web Services
@@ -45,8 +45,3 @@ python setup.py install --root %{buildroot} --install-purelib=%{py_platsitedir}
 %files 
 %{py_platsitedir}/*
 %{_bindir}/*
-
-
-
-
-
