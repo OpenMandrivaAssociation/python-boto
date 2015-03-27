@@ -3,8 +3,8 @@
 %define debug_package %{nil}
 
 Name:           python-%{module}
-Version:	2.32.1
-Release:        2
+Version:	2.35.2
+Release:        1
 License:        MIT
 Summary:        Python interface to Amazon Web Services
 
