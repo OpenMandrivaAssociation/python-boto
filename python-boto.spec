@@ -3,14 +3,14 @@
 %define debug_package %{nil}
 
 Name:           python-%{module}
-Version:	2.32.1
-Release:        2
+Version:	2.49.0
+Release:	1
 License:        MIT
 Summary:        Python interface to Amazon Web Services
 
 Url:            http://code.google.com/p/boto/
 Group:          Development/Python
-Source0:	http://pypi.python.org/packages/source/b/boto/boto-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/c8/af/54a920ff4255664f5d238b5aebd8eedf7a07c7a5e71e27afcfe840b82f51/boto-2.49.0.tar.gz
 BuildRequires:  python-setuptools
 
 %description
