@@ -4,7 +4,7 @@
 
 Name:           python-%{module}
 Version:	2.49.0
-Release:	2
+Release:	3
 License:        MIT
 Summary:        Python interface to Amazon Web Services
 
